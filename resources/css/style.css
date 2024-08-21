@@ -1,0 +1,198 @@
+@import "reset.css";
+@import "font.css";
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #ededed;
+    font-family: Pretendard;
+    font-size: 14px;
+}
+.canvas_wrap {
+    display: flex;
+    margin: auto;
+}
+canvas {
+    width: 800px;
+    height: 800px;
+    border: 2px solid rgba(0,0,0,.15);
+    border-radius: 2px;
+    background-color: #FFF;
+    box-shadow: 0 0 16px rgba(0,0,0,.05);
+}
+.setting {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+}
+.setting .up,
+.setting .down {
+    display: flex;
+    flex-direction: column;
+}
+.setting .down {
+    margin-top: auto;
+}
+.setting > * ~ *,
+.setting .up > * ~ *,
+.setting .down > * ~ * {
+    margin-top: 16px;
+}
+.label {
+    font-weight: 700;
+    padding-bottom: 8px;
+}
+.label + * {
+    margin-top: 0 !important;
+}
+.color-option__wrap {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+    max-width: 84px;
+    margin-top: 12px;
+}
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+input#color {
+    width: 82px;
+    height: 82px;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    padding: 0;
+    cursor: pointer;
+}
+input#color::-webkit-color-swatch {
+    margin: -4px;
+    border: 0;
+}
+input#text {
+    width: 256px;
+    height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.05);
+    background-color: #FFF;
+    outline: none;
+    transition: border .25s, box-shadow .25s;
+}
+input#text::placeholder {
+    opacity: .5;
+}
+input#text:hover {
+    border: 1px solid rgba(0,0,0,.15);
+}
+input#text:focus {
+    box-shadow: 0 0 0 2px rgba(0,0,0,.05);
+}
+input#file {
+    display: none;
+}
+input#line-width {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFF;
+  height: 8px;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+}
+input#line-width::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    background-color: #3867d6;
+  }
+input#line-width::-webkit-slider-thumb:hover {
+    background-color: #4677e9;
+    cursor: pointer;
+  }
+.flex_wrap {
+    display: flex;
+    gap: 8px;
+}
+.flex_wrap > * {
+    flex: 1;
+}
+.setting button,
+.button {
+    height: 40px;
+    border-radius: 4px;
+    border: 0;
+    background-color: #FFF;
+    cursor: pointer;
+    transition: box-shadow .25s;
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+}
+.setting button:hover,
+.button:hover,
+.radio-btn input + span:hover {
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+}
+.setting button i,
+.button i,
+.radio-btn input + span i {
+    font-size: 1.2em;
+    opacity: .5;
+    transition: opacity .25s;
+}
+.setting button:hover i,
+.button:hover i,
+.radio-btn input + span:hover i,
+.radio-btn input:checked + span i {
+    opacity: 1;
+}
+select {
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.05);
+    background-color: #FFF;
+    outline: none;
+    transition: border .25s, box-shadow .25s;
+}
+select:hover {
+    border: 1px solid rgba(0,0,0,.15);
+}
+select:focus {
+    box-shadow: 0 0 0 2px rgba(0,0,0,.05);
+}
+.radio-btn input + span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    border: 0;
+    background-color: #FFF;
+    cursor: pointer;
+    transition: box-shadow .25s, background-color .25s;
+}
+.radio-btn input:checked + span {
+    background-color: #3867d6;
+    color: #FFF;
+}
+button#save-btn {
+    transition: box-shadow .25s background-color .35s color .35s;
+}
+button#save-btn:hover {
+    background-color: #3867d6;
+    color: #FFF;
+}

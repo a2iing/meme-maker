@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-Maker</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/all.min.css">
+</head>
+<body>
+    <section class="canvas_wrap">
+        <div class="setting">
+            <p class="label">Color</p>
+            <input type="color" id="color">
+            <div class="color-option__wrap">
+                <div class="color-option" style="background-color: #eb3b5a;" data-color="#eb3b5a"></div>
+                <div class="color-option" style="background-color: #fa8231;" data-color="#fa8231"></div>
+                <div class="color-option" style="background-color: #f7b731;" data-color="#f7b731"></div>
+                <div class="color-option" style="background-color: #20bf6b;" data-color="#20bf6b"></div>
+                <div class="color-option" style="background-color: #0fb9b1;" data-color="#0fb9b1"></div>
+                <div class="color-option" style="background-color: #2d98da;" data-color="#2d98da"></div>
+                <div class="color-option" style="background-color: #3867d6;" data-color="#3867d6"></div>
+                <div class="color-option" style="background-color: #8854d0;" data-color="#8854d0"></div>
+                <div class="color-option" style="background-color: #a5b1c2;" data-color="#a5b1c2"></div>
+                <div class="color-option" style="background-color: #4b6584;" data-color="#4b6584"></div>
+            </div>
+            <div class="color-option__wrap">
+                <div class="color-option" style="background-color: #FFFFFF;" data-color="#FFFFFF"></div>
+                <div class="color-option" style="background-color: #e5e5e5;" data-color="#e5e5e5"></div>
+                <div class="color-option" style="background-color: #d2d2d2;" data-color="#d2d2d2"></div>
+                <div class="color-option" style="background-color: #bfbfbf;" data-color="#bfbfbf"></div>
+                <div class="color-option" style="background-color: #aaaaaa;" data-color="#aaaaaa"></div>
+                <div class="color-option" style="background-color: #959595;" data-color="#959595"></div>
+                <div class="color-option" style="background-color: #7d7d7d;" data-color="#7d7d7d"></div>
+                <div class="color-option" style="background-color: #626262;" data-color="#626262"></div>
+                <div class="color-option" style="background-color: #434343;" data-color="#434343"></div>
+                <div class="color-option" style="background-color: #313131;" data-color="#313131"></div>
+                <div class="color-option" style="background-color: #1b1b1b;" data-color="#1b1b1b"></div>
+                <div class="color-option" style="background-color: #000000;" data-color="#000000"></div>
+            </div>
+        </div>
+        <canvas></canvas>
+        <div class="setting">
+            <div class="up">
+                <p class="label">Line-width</p>
+                <input type="range" id="line-width" min="1" max="10" value="3" step="0.1">
+                <p class="label">Draw-option</p>
+                <div class="flex_wrap">
+                    <button id="mode-btn"><i class="fa-solid fa-fill-drip"></i></button>
+                    <button id="eraser-btn"><i class="fa-solid fa-eraser"></i></button>
+                    <button id="clear-btn"><i class="fa-solid fa-broom"></i></button>
+                    <label class="button">
+                        <input type="file" id="file" accept="image/*">
+                        <i class="fa-solid fa-upload"></i>
+                    </label>
+                </div>
+                <p class="label">Text</p>
+                <div class="flex_wrap">
+                    <select id="font-face">
+                        <option value="SUITE">스위트</option>
+                        <option value="Pretendard">프리텐다드</option>
+                        <option value="Paperlogy" selected>페이퍼로지</option>
+                    </select>
+                    <select id="font-size">
+                        <option value="16">16</option>
+                        <option value="24">24</option>
+                        <option value="32">32</option>
+                        <option value="40" selected>40</option>
+                        <option value="48">48</option>
+                        <option value="56">56</option>
+                        <option value="64">64</option>
+                    </select>
+                    <label class="radio-btn">
+                        <input type="radio" name="text-shape" id="isSolid" checked>
+                        <span>
+                            <i class="fa-solid fa-circle"></i>
+                        </span>
+                    </label>
+                    <label class="radio-btn">
+                        <input type="radio" name="text-shape">
+                        <span>
+                            <i class="fa-regular fa-circle"></i>
+                        </span>
+                    </label>
+                </div>
+                <input type="text" id="text" placeholder="Write Text and DoublClick on Canvas :)">
+            </div>
+            <div class="down">
+                <button id="save-btn">
+                    <i class="fa-solid fa-download"></i><span style="margin-left: 6px;">Save Image</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="resources/js/app.js"></script>
+</body>
+</html>
